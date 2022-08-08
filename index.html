@@ -1,0 +1,661 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <title>FRIDAY FILMHOUSE</title>
+        <link rel="stylesheet" href="test.css">
+
+    </head>
+
+    <body class="body">
+    
+
+        <div class="Top">
+
+            <div class="friday">
+            <pre>  <img src="logo.jpeg" height="100" width="100" style="border-radius:10px;">      <b class="ft">FRIDAY FILMHOUSE</b></pre>
+            </div>
+                   <div class="topa">
+                     <div class="topb">
+                        <a class="topb" href="test.html " target="_parent" " style=" color:azure; text-decoration:none;">HOME</a>
+                        <a class="topb" href="aboutus.html " target="_parent" " style=" color:azure; text-decoration:none;">ABOUT</a>
+                        <a class="topb" href="contactus.html " target="_parent" " style=" color:azure; text-decoration:none;">CONTACT US</a>
+                        <a class="topb" href="login.html " target="_parent" " style=" color:azure; text-decoration:none;">LOGIN IN</a>
+
+                        <div class="searchcontainer">
+                            <form>
+                                <input class="search" type="text" placeholder="Search..  " name="search" required>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                       
+                        
+                     </div>
+                
+                   </div>
+        </div>
+
+
+
+
+
+      <div class="middle">
+        <div class="slideshow-container">
+        
+           
+            <div class="mySlides">
+                <a href="https://www.youtube.com/watch?v=eOrNdBpGMv8" target="_blank"> <img src="img1.jpeg" alt="HTML PIC" style="width:100%;" width="1430"
+                        height="300"></a>
+            </div>
+
+            <div class="mySlides">
+                <a href="https://www.youtube.com/watch?v=g8evyE9TuYk" target="_blank"> <img src="img2.jpeg" alt="HTML PIC" style="width:100%;" width="1430"
+                        height="300"></a>
+            </div>
+
+            <div class="mySlides">
+                <a href="https://www.youtube.com/watch?v=YoHD9XEInc0" target="_blank"> <img src="img3.jpeg" alt="HTML PIC" style="width:100%;" width="1430"
+                        height="300"></a>
+            </div>
+
+            <div class="mySlides">
+                <a href=" " target="_parent"> <img src="img4.jpeg" alt="HTML PIC" style="width:100%;" width="1430" height="300"></a>
+                </div>
+            </div>
+
+                
+            <div class="mySlides">
+               <center> <a href=" " target="_parent"> <img src="img5.jpeg" alt="HTML PIC" width="1000" height="300" ></a> </center>
+               
+            </div>
+
+            
+
+            <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+            <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+
+           
+        </div>
+
+    
+        
+        
+        <br />
+
+
+
+
+
+        <div style='text-align: center;'>
+            <span class="dot" onclick='currentSlide(1)'></span>
+            <span class="dot" onclick='currentSlide(2)'></span>
+            <span class="dot" onclick='currentSlide(3)'></span>
+            <span class="dot" onclick='currentSlide(4)'></span>
+            <span class="dot" onclick='currentSlide(5)'></span>
+        </div>
+
+    </div>
+
+   
+    <div class="middletext">
+        <p class="txt">Recommended Movies</p>
+    </div>
+
+
+
+
+
+
+    <div id="bottomk"class="bottom">
+
+        <div class="bottoma">
+
+        <div class="poster">
+            <span class="tk" onclick="posterslide(1)" > <img src="p1.jpeg" alt="HTML PIC"
+                    height="400" width="300"></span>
+        </div>
+        
+        <div class="poster">
+            <span  class="tk" onclick="posterslide(2)" > <img src="p2.jpeg" alt="HTML PIC"
+                    height="400" width="300"></span>
+        </div>
+        
+        <div class="poster">
+            <span class="tk" onclick="posterslide(3)" > <img src="p3.jpeg" alt="HTML PIC"
+                    height="400" width="300"></span>
+        </div>
+        
+
+        <div class="poster">
+            <span  class="tk" onclick="posterslide(4)" > <img src="p4.jpeg" alt="HTML PIC"
+                  height="400" width="300"></span>
+        </div>
+        
+        <div class="poster">
+            <span  class="tk" onclick="posterslide(5)" > <img src="p5.jpeg" alt="HTML PIC"
+                    height="400" width="300" ></span>
+        </div>
+        
+        <div class="poster">
+            <span class="tk" onclick="posterslide(6)" > <img src="p6.jpeg" alt="HTML PIC"
+                   height="400" width="300"></span>
+        </div>
+
+        <div class="poster">
+            <span class="tk" onclick="posterslide(7)" > <img src="p7.jpeg" alt="HTML PIC"
+                    height="400" width="300" ></span>
+        </div>
+        
+        <div class="poster">
+            <span class="tk" onclick="posterslide(8)" > <img src="p8.jpeg" alt="HTML PIC"
+                   height="400" width="300"></span>
+        </div>
+         
+        </div>
+        <div class="overlay"></div>
+
+        </div>
+        
+        
+ 
+       
+    </div>
+
+<script>
+    let x = 1;
+    showposter(x);
+    
+    function posterslide(n) {
+        showposter(x = n);
+    }
+
+    function showposter(n) {
+        let y;
+        let poster = document.getElementsByClassName("mvk");
+        let tk = document.getElementsByClassName("tk");
+        
+        if (n > poster.length)
+         {
+              x = 1
+             
+         }
+        if (n < 1)
+         { 
+             x = poster.length
+         }
+        for (y = 0; y < poster.length; y++) {
+            poster[y].style.display = "none";
+            
+
+        }
+        for (y = 0; y < tk.length; y++) {
+            tk[y].className = tk[y].className.replace("active","");
+        }
+        poster[x-1].style.display = "block";
+        tk[x-1].className += " active";
+    }
+</script>
+
+
+
+
+
+    <div class="bottomtwo">
+
+      <div class="left">
+
+        <div class="infos">
+            <form action="redirect.html">
+                <p>MOVIE BOOKING </p>
+                <label for="fname">Movie Name:</label>
+                <br>
+                <select class="movie" id="fname" name="firstname" placeholder="Movie name.." required>
+                <option value="">--Movie--</option>
+                <option value="movie">BLACK PANTHER</option>
+                <option value="movie">SPIDERMAN</option>
+                <option value="movie">MOONLIGHT</option>
+                <option value="movie">JOKER</option>
+                <option value="movie">AVATAR</option>
+                <option value="movie">TITANIC</option>
+                <option value="movie">AVENGERS</option>
+                <option value="movie">1917</option>
+                
+                </select>
+
+                <br>
+                <br>
+
+                <label for="cname">CINEMA:</label>
+                <br>
+                <select class="cinema" id="cinema" name="cinema" placeholder="Theatres.." required>
+                    
+                    <option value="">--Theateres--</option>
+
+                    <option value="cinema">PVR JALANDAR</option>
+                    <option value="cinema">PVR LUDIANA</option>
+                    <option value="cinema">PRIME CINEMA</option>
+                    <option value="cinema">SARAAB CINEMA</option>
+
+                    </select>
+
+                    <br>
+                    <br>
+
+                    <label for="time">TIME:</label>
+                    <br>
+                    <select class="time" id="time" name="time" placeholder="Theatres.." required>
+                        <option value="">--Time--</option>
+                        <option value="time">9 AM</option>
+                        <option value="time">12 PM</option>
+                        <option value="time">4 PM</option>
+                        <option value="time">8 PM</option>
+                    
+                    </select>
+
+                <br>
+                <br>
+
+                <input class="submit"type="submit"  value="BOOK IT">
+            </form>
+        </div>
+        </div>
+       
+
+
+       
+      <div class="right">
+
+        
+
+        <div class="mvk">
+            <div class="right">
+                <h1>Black Panther</h1>
+        
+                <div class="r1">
+                    <div class="rleft">
+                        <img src="p1.jpeg" height="300px">
+                    </div>
+                    <div class="rright">
+                        <video style="height: 300px;" type="video/mp4" src="black trailer.mp4" controls></video>
+                    </div>
+                </div>
+                <h4><B>IMDb RATING</B></h4>
+                <p>7.3/10</p>
+                <h4>Storyline</h4>
+                <pre> After the events of Captain America: Civil War, Prince T'Challa returns home to the reclusive,
+                technologically advanced African nation of Wakanda to serve as his country's new king. However, T'Challa 
+                soon finds that he is challenged for the throne from factions within his own country. When two foes conspire to 
+                destroy Wakanda, the hero known as Black Panther must team up with C.I.A. agent Everett K. Ross and members of the 
+                Dora Milaje, Wakandan special forces, to prevent Wakanda from being dragged into a world war.</pre>
+        
+            </div>
+        
+        </div>
+
+       
+
+
+
+
+
+    <div class="mvk">
+        <div class="right">
+            <h1>Spider Man : No Way Home</h1>
+    
+            <div class="r1">
+                <div class="rleft">
+                    <img src="p2.jpeg" height="300px">
+                </div>
+                <div class="rright">
+                    <video style="height: 300px;" type="video/mp4" src="spd trailer.mp4" controls></video>
+                </div>
+            </div>
+            <h4><B>IMDb RATING</B></h4>
+            <p>7.3/10</p>
+            <h4>Storyline</h4>
+            <pre> Peter Parker's secret identity is revealed to the entire world. Desperate for help, Peter turns to
+             Doctor Strange to make the world forget that he is Spider-Man. The spell goes horribly wrong and shatters
+             the multiverse, bringing in monstrous villains that could destroy the world.</pre>
+    
+        </div>
+    
+    </div>
+    
+
+
+
+    <div class="mvk">
+        <div class="right">
+            <h1>Moonlight</h1>
+    
+            <div class="r1">
+                <div class="rleft">
+                    <img src="p3.jpeg"height="300px">
+                </div>
+                <div class="rright">
+                    <video style="height: 300px;" type="video/mp4" src="moonlight trailer.mp4" controls></video>
+                </div>
+            </div>
+            <h4><B>IMDb RATING</B></h4>
+            <p>7.3/10</p>
+            <h4>Storyline</h4>
+            <pre> Three time periods - young adolescence, mid-teen and young adult - in the life of black-American Chiron 
+            is presented.When a child, Chiron lives with his single, crack addict mother Paula in a crime ridden neighborhood 
+            in Miami. Chiron is a shy, withdrawn child largely due to his small size and being neglected by his mother, who is 
+            more concerned about getting her fixes and satisfying her carnal needs than taking care of him.</pre>
+    
+        </div>
+    
+    </div>
+    
+
+
+
+
+    <div class="mvk">
+        <div class="right">
+            <h1>Joker</h1>
+    
+            <div class="r1">
+                <div class="rleft">
+                    <img src="p4.jpeg" height="300px">
+                </div>
+                <div class="rright">
+                    <video style="height: 300px;" type="video/mp4" src="joker trailer.mp4" controls></video>
+                </div>
+            </div>
+            <h4><B>IMDb RATING</B></h4>
+            <p>7.3/10</p>
+            <h4>Storyline</h4>
+            <pre> Arthur Fleck works as a clown and is an aspiring stand-up comic. He has mental health issues, part of which 
+            involves uncontrollable laughter. Times are tough and, due to his issues and occupation, Arthur has an even worse 
+            time than most.Over time these issues bear down on him, shaping his actions, making him ultimately take on the persona 
+            he is more known as...Joker.</pre>
+    
+        </div>
+    
+    </div>
+    
+
+
+
+
+    <div class="mvk">
+        <div class="right">
+            <h1>Avatar</h1>
+    
+            <div class="r1">
+                <div class="rleft">
+                    <img src="p5.jpeg"height="300px">
+                </div>
+                <div class="rright">
+                    <video style="height: 300px;" type="video/mp4" src="avatar trailer.mp4" controls></video>
+                </div>
+            </div>
+            <h4><B>IMDb RATING</B></h4>
+            <p>7.3/10</p>
+            <h4>Storyline</h4>
+            <pre> When his brother is killed in a robbery, paraplegic Marine Jake Sully decides to take his place in 
+            a mission on the distant world of Pandora. There he learns of greedy corporate figurehead Parker Selfridge's 
+            intentions of driving off the native humanoid "Na'vi" in order to mine for the precious material scattered throughout
+            their rich woodland. Inexchange for the spinal surgery that will fix his legs, Jake gathers knowledge, of the Indigenous
+            Race and their Culture, for the cooperating military unit spearheaded by gung-ho Colonel Quaritch, while simultaneously 
+            attempting to infiltrate the Na'vi people with the use of an "avatar" identity.</pre>
+    
+        </div>
+    
+    </div>
+    
+
+
+
+    <div class="mvk">
+        <div class="right">
+            <h1>Titanic</h1>
+    
+            <div class="r1">
+                <div class="rleft">
+                    <img src="p6.jpeg"height="300px">
+                </div>
+                <div class="rright">
+                    <video style="height: 300px;" type="video/mp4" src="titanic trailer.mp4" controls></video>
+                </div>
+            </div>
+            <h4><B>IMDb RATING</B></h4>
+            <p>7.3/10</p>
+            <h4>Storyline</h4>
+            <pre> 84 years later, a 100 year-old woman named Rose DeWitt Bukater tells the story to her granddaughter
+            Lizzy Calvert, Brock Lovett, Lewis Bodine, Bobby Buell and Anatoly Mikailavich on the Keldysh about her life
+            set in April 10th 1912, on a ship called Titanic when young Rose boards the departing ship with the upper-class 
+            passengers and her mother, Ruth DeWitt Bukater, and her fiancé, Caledon Hockley. Meanwhile, a drifter and artist 
+            named Jack Dawson and his best friend Fabrizio De Rossi win third-class tickets to the ship in a game. And she 
+            explains the whole story from departure until the death of Titanic on its first and last voyage April 15th, 1912 
+            at 2:20 in the morning.</pre>
+    
+        </div>
+    
+    </div>
+    
+
+
+
+
+    <div class="mvk">
+        <div class="right">
+            <h1>Avengers Endgame</h1>
+    
+            <div class="r1">
+                <div class="rleft">
+                    <img src="p7.jpeg" height="300px">
+                </div>
+                <div class="rright">
+                    <video style="height: 300px;" type="video/mp4" src="avengers trailer.mp4" controls></video>
+                </div>
+            </div>
+            <h4><B>IMDb RATING</B></h4>
+            <p>7.3/10</p>
+            <h4>Storyline</h4>
+            <pre> After the devastating events of Avengers: Infinity War (2018), the universe is in ruins due to the
+            efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in 
+            order to undo Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store,
+            and no matter who they face....</pre>
+    
+        </div>
+    
+    </div>
+    
+
+
+
+
+    <div class="mvk">
+        <div class="right">
+            <h1>1917</h1>
+    
+            <div class="r1">
+                <div class="rleft">
+                    <img src="p8.jpeg" height="300px">
+                </div>
+                <div class="rright">
+                    <video style="height: 300px;" type="video/mp4" src="1917 trailer.mp4" controls></video>
+                </div>
+            </div>
+            <h4><B>IMDb RATING</B></h4>
+            <p>7.3/10</p>
+            <h4>Storyline</h4>
+            <pre> April 1917, the Western Front. Two British soldiers are sent to deliver an urgent message to an isolated 
+            regiment. If the message is not received in time the regiment will walk into a trap and be massacred. To get to 
+            the regiment they will need to cross through enemy territory. Time is of the essence and the journey will be 
+            fraught with danger</pre>
+    
+        </div>
+
+
+        
+
+
+    
+    </div>
+    </div>
+    
+
+
+    </div>
+    
+
+
+    <div class="About">
+
+    <h1>ABOUT US</h1>
+    <pre style="text-align: center;">     Filmhouse At Home is our new online booking platform, allowing you to enjoy the finest Filmhouse-curated
+         cinema from the comfort of your own home.
+    Initially offering 20+ titles starting from 500, our Filmhouse at Home programme will grow to present a similar
+    selection of films to that which our audiences are accustomed to: independent, world cinema at its best.
+    
+    Live from Friday 26 March, our first titles include the award-winning Stray, a captivating documentary about stray dogs
+    on the streets of Istanbul that had its premiere at London Film Festival, Holocaust survival drama Persian Lessons from
+    the director of House of Sand and Fog, Vadim Perelman, critically-acclaimed documentary Poly Styrene: I am a Cliché
+    about counter-culture icon and punk pioneer Poly Styrene and the first documentary entirely in Scots Gaelic, Iorram
+    (Boat Song) which is a lyrical portrait of the fishing community in Outer Hebrides, past and present. Our future
+    programme will include, among others, Sundance-winning and now Oscar®-nominated Minari.
+    
+    You can sign up to use our services for free. You will only pay for the films you choose to book. Simply create an
+    account and browse!
+    
+    Please visit our Help & FAQs section for more information on Filmhouse at Home.
+    
+    Filmhouse at Home is generously supported by the Weston Cultural Fund.</pre>
+
+
+    </div>
+
+
+
+    <div class="contactmain">
+        <h1>CONTACT US </h1>
+        <div class="contact">
+        <div class="contacta">
+            <p><b>FRIDAY FILMHOUSE</b></p>
+        
+            <br>
+
+            
+            <p><b>BUSSINESS ENQUIRY</b></p>
+            <P>d16dharshan@gmail.com</P>
+
+            
+
+        </div>
+        <div class="contactb">
+            <br><br><br><br>
+            <p><b>ADDRESS</b></p>
+            <p>Lovely Professional University</p>
+            <p>Phagwara</p>
+
+
+        </div>
+
+        <div class="contactc">
+            <br><br><br><br>
+            <p><b>VISIT OUR SITE AGAIN!!!</b></p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="end">
+        <div class="enda">
+            <a href="https://www.facebook.com/"><img class="kk"style="height: 40px;" src="facebook.png"></a>
+            <a href="https://www.instagram.com/im_kronos_/?hl=en"><img class="kk" style="height: 40px;" src="insta.jpeg"></a>
+            <a href="https://twitter.com/im_kronos_"><img class="kk" style="height: 40px;" src="twit.png"></a>
+            <a href="https://www.linkedin.com/in/dharshanm/"><img class="kk" style="height: 40px;" src="linkedin.png"></a>
+            <a href="https://gmail.google.com/inbox/"><img class="kk"  style="height: 40px;" src="gmail.jpeg"></a>
+            <a href="https://github.com/im-kronos"><img class="kk"  style="height: 40px;" src="git.png"></a>
+        </div>
+    </div>
+
+
+
+        <script>
+            var slideIndex = 1;
+
+                var myTimer;
+
+                var slideshowContainer;
+
+                window.addEventListener("load", function () {
+                    showSlides(slideIndex);
+                    myTimer = setInterval(function () { plusSlides(1) }, 4000);
+
+                    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+                    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+                    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+                    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+
+                    slideshowContainer.addEventListener('mouseenter', pause)
+                    slideshowContainer.addEventListener('mouseleave', resume)
+                })
+
+                // NEXT AND PREVIOUS CONTROL
+                function plusSlides(n) {
+                    clearInterval(myTimer);
+                    if (n < 0) {
+                        showSlides(slideIndex -= 1);
+                    } else {
+                        showSlides(slideIndex += 1);
+                    }
+
+                    //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+
+                    if (n === -1) {
+                        myTimer = setInterval(function () { plusSlides(n + 2) }, 4000);
+                    } else {
+                        myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+                    }
+                }
+
+                //Controls the current slide and resets interval if needed
+                function currentSlide(n) {
+                    clearInterval(myTimer);
+                    myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+
+                pause = () => {
+                    clearInterval(myTimer);
+                }
+
+                resume = () => {
+                    clearInterval(myTimer);
+                    myTimer = setInterval(function () { plusSlides(slideIndex) }, 4000);
+                }
+
+         
+            
+        </script>
+
+        </div>
+
+    </body>
+
+    </html>
